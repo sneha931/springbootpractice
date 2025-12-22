@@ -14,4 +14,8 @@ public class ProductService {
         return products;
 
     }
+    public Product getproductbyId(int prodid){
+         return products.stream().filter(p->p.getProdId()==prodid).findFirst().get();
+
+    }
 }
